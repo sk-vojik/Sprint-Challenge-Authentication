@@ -2,7 +2,6 @@ const axios = require('axios');
 const bcrypt = require('bcryptjs');
 const generateToken = require('../auth/token-gen');
 
-
 const Users = require('../config/helpers')
 
 const { authenticate } = require('../auth/authenticate');
@@ -13,7 +12,6 @@ module.exports = server => {
   server.get('/api/jokes', authenticate, getJokes);
   server.get('/api/users', getUsers)
 };
-
 
 //GET USERS
 
